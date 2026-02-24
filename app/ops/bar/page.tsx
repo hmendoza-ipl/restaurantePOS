@@ -81,10 +81,10 @@ export default function BarScreen() {
       {/* Counters */}
       <div className="grid grid-cols-3 gap-3">
         {[
-          { label: "En cola",    count: counts.queued,    ...statusStyle.queued },
-          { label: "Preparando", count: counts.preparing, ...statusStyle.preparing },
-          { label: "Listos",     count: counts.ready,     ...statusStyle.ready },
-        ].map((s) => (
+            { count: counts.queued,    ...statusStyle.queued },
+            { count: counts.preparing, ...statusStyle.preparing },
+            { count: counts.ready,     ...statusStyle.ready },
+          ].map((s) => (
           <div key={s.label} className="rounded-[20px] p-4 text-center"
             style={{ background: s.bg, border: `1px solid ${s.border}` }}>
             <div className="text-3xl font-extrabold" style={{ color: s.color }}>{s.count}</div>
